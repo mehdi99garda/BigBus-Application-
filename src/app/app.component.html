@@ -1,3 +1,50 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main" menuId="main-menu" side="start" type="overlay">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="assets/imgs/logo.png"/>
+      </div>
+
+      <ion-menu-toggle>
+        <ion-list class="menu-items" lines="none">
+          <ion-item button routerLink="home">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Accueil</ion-label>
+          </ion-item>
+  
+          <ion-item button routerLink="excursions">
+            <ion-icon name="location"></ion-icon>
+            <ion-label>Excursions</ion-label>
+          </ion-item>
+  
+          <ion-item button routerLink="circuits">
+            <ion-icon name="trail-sign"></ion-icon>
+            <ion-label>Circuits</ion-label>
+          </ion-item>
+  
+          <ion-item button routerLink="activities">
+            <ion-icon name="car-sport"></ion-icon>
+            <ion-label>Activities</ion-label>
+          </ion-item>
+  
+          <ion-item button routerLink="transferts">
+            <ion-icon name="airplane"></ion-icon>
+            <ion-label>Transferts</ion-label>
+          </ion-item>
+  
+          <ion-item button routerLink="/qui-nous">
+            <ion-icon name="list"></ion-icon>
+            <ion-label>Qui Somme Nous</ion-label>
+          </ion-item>
+  
+          <ion-item button routerLink="contact">
+            <ion-icon name="briefcase"></ion-icon>
+            <ion-label>Contactez Nous</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

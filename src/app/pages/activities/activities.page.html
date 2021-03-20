@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Activities</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item class="ion-text-center">
+    <ion-select mode="ios" placeholder="Balade en quad et buggy dans les environs de Marrakech" interface="action-sheet" cancelText="fermer">
+      <ion-select-option>Balade en quad et buggy dans les environs de Marrakech</ion-select-option>
+      <ion-select-option>Balade en dromadaire dans les environs de Marrakec</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="loading">
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </ion-fab>
+  </div>
+
+  <div *ngIf="finishloading">
+    <ion-slides mode="ios" [options]="option" class="ion-margin-top">
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/buggy.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/quad-palmeraie.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/quad.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/balade-dromadaire.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div *ngIf="finishloading">
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">BALADE EN QUAD À LA PALMERAIE</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Parcours dans les plaines de terres sèche de la palmeraie traversée des village et dune et prêt désert aux alentours de Marrakech. Des guides pros sympas et attentionnés font aussi notre différence cette excursion s'adapte a tous les ages.
+
+            Une halte est prévue dans un parc en plein palmeraie pour un goûter durée total d'environ 4 heur transfert, réception, préparation; briefing, initiation parcours, débriefing et retour a l hôtel.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">DEUX DÉPART PAR JOUR </b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            9H00 à 13H00 et 14H00 à 18H00
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">LA PRESTATION COMPREND</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Transfert aller / retour de votre hotel/riad. <br>
+            Le thé et les crêpes vous sont offerts chez l’habitant. <br>
+            Équipements nécessaire (gants, casques, lunettes…) <br>
+            Encadrement et assistance par des guides professionnels en quad. Enfant de moin de 12 ans
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">FORMULAIRE DE CONTACT</b>
+        </ion-label>
+      </ion-chip>
+    </div>
+  
+    <div class="ion-margin-top" mode="md">
+      <ion-item>
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Nom Complet</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label position="floating">Telephone</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="people" slot="start"></ion-icon>
+        <ion-label>Nombre de perssone</ion-label>
+        <ion-select mode="ios" placeholder="1" interface="action-sheet" cancelText="fermer">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>plus de 5</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Date d'arivee</ion-label>
+        <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Date du depart</ion-label>
+        <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+      </ion-item>
+    
+    </div>
+    
+    <ion-button expand="block" shape="round" color="primary" class="ion-margin-top ion-margin-bottom">
+      Réservation 
+    </ion-button>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d13587.866456860445!2d-7.998731768246882!3d31.634764470640057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakesh%2C+Morocco!3m2!1d31.6294723!2d-7.9810845!4m5!1s0xdafee61783563b1%3A0x1287c1efdaa53fb0!2sPalmeraie+Marrakech%2C+Marrakesh%2C+Morocco!3m2!1d31.633332999999997!2d-8!5e0!3m2!1sen!2s!4v1450265410548" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>	
+
+  </div>
+
+
+
+
+</ion-content>
+

@@ -1,20 +1,399 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      BigBus Marrakech
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="ion-text-center ion-margin-top">
+    <ion-chip color="primary" outline (click)="Alert('+212 6 613 85 101')">
+      <ion-icon name="call"></ion-icon>
+    </ion-chip>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-chip color="success" outline (click)="Alert('+212 691 967 933')">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-chip>
+
+    <ion-chip color="medium" outline (click)="Alert('cdramaroc@gmail.com')">
+      <ion-icon name="mail"></ion-icon>
+    </ion-chip>
+
+    <ion-chip color="secondary" outline (click)="Alert('www.bigbus-marrakech.com')">
+      <ion-icon name="globe-outline"></ion-icon>
+    </ion-chip>
+    
+    <ion-chip color="danger" outline (click)="Alert('Mag N : 3 Immeuble 423, B Massira 3, 40000 Marrakech, Maroc.')">
+      <ion-icon name="location"></ion-icon>
+    </ion-chip>
   </div>
+  <ion-slides mode="ios" [options]="option">
+    <ion-slide>
+      <ion-card class="card">
+        <img src="assets/imgs/img1.jpg" alt="">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="card">
+        <img src="assets/imgs/img2.jpg" alt="">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="card">
+        <img src="assets/imgs/img3.jpg" alt="">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <!--excursion-->
+  <div class="ion-text-center ion-margin-top">
+    <ion-chip color="tertiary">
+      <ion-label>
+        <b class="titre">EXCURSIONS AU DÉPART DE MARRAKECH</b>
+      </ion-label>
+    </ion-chip>
+  </div>
+
+  <div *ngIf="loading">
+    <ion-item button class="ion-margin-top">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h2><ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text></h2>
+        <p><ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h2><ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text></h2>
+        <p><ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h2><ion-skeleton-text animated style="width: 40%;"></ion-skeleton-text></h2>
+        <p><ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text></p>
+      </ion-label>
+    </ion-item>
+  </div>
+
+  <div *ngIf="finishloading">
+    <ion-item button class="ion-margin-top">
+      <ion-thumbnail slot="start">
+        <ion-img src="assets/imgs/01.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>vallee d'ourika</h2>
+        <p>une vallée typique de haut atlas , Big bus voyage vous propose de visite l’oued d ourika l une des rares rivières de la région de Marrakech qui coule toute l’année</p>
+      </ion-label>
+    </ion-item>
+  
+    <ion-item button>
+      <ion-thumbnail slot="start">
+        <ion-img src="assets/imgs/02.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>vallee d'asni</h2>
+        <p>une vallée typique de haut atlas , Big bus voyage vous propose de visite l’oued d ourika l une des rares rivières de la région de Marrakech qui coule toute l’année</p>
+      </ion-label>
+    </ion-item>
+  
+    <ion-item button>
+      <ion-thumbnail slot="start">
+        <ion-img src="assets/imgs/03.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>vallee de siti fadma</h2>
+        <p>une vallée typique de haut atlas , Big bus voyage vous propose de visite l’oued d ourika l une des rares rivières de la région de Marrakech qui coule toute l’année</p>
+      </ion-label>
+    </ion-item>
+  </div>
+
+<!--circuits-->
+<div class="ion-text-center ion-margin-top">
+  <ion-chip color="tertiary">
+    <ion-label>
+      <b class="titre">CIRCUITS AU DÉPART DE MARRAKECH AU MAROC</b>
+    </ion-label>
+  </ion-chip>
+</div>
+
+<div *ngIf="loading">
+  <ion-item button class="ion-margin-top">
+    <ion-label class="ion-text-right">
+      <h4><ion-skeleton-text animated style="width: 90%"></ion-skeleton-text></h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label><ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+    <ion-thumbnail slot="end">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-thumbnail>
+  </ion-item>
+
+  <ion-item button>
+    <ion-label class="ion-text-right">
+      <h4><ion-skeleton-text animated style="width: 90%"></ion-skeleton-text></h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label><ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+    <ion-thumbnail slot="end">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-thumbnail>
+  </ion-item>
+</div>
+
+<div *ngIf="finishloading">
+  <ion-item button class="ion-margin-top">
+    <ion-label class="ion-text-right">
+      <h4>Circuit Desert 2 Jours 1 Nuit Zagora Sahara</h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label>-20%</ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+    <ion-thumbnail slot="end">
+      <ion-img src="assets/imgs/circuits/01.jpg"></ion-img>
+    </ion-thumbnail>
+  </ion-item>
+  
+  <ion-item button>
+    <ion-label class="ion-text-right">
+      <h4>Circuit desert 3 jours 2 nuits merzouga sahara</h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label>-30%</ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+    <ion-thumbnail slot="end">
+      <ion-img src="assets/imgs/circuits/02.jpg"></ion-img>
+    </ion-thumbnail>
+  </ion-item>
+</div>
+
+<!--qui somme nous-->
+<div class="ion-text-center ion-margin-top">
+  <ion-chip color="tertiary">
+    <ion-label>
+      <h2 class="titre"><b>BIG BUS MARRAKECH</b></h2>
+    </ion-label>
+  </ion-chip>
+</div>
+<div class="bg-tertiary ion-margin-top ion-text-center">
+  <ion-text class="mx" color="light">
+    <p>
+      Big Bus Marrakech est une compagnie de voyage et de transport touristique au Maroc formée par une équipe de guides professionnels et de chauffeurs avec une grande expérience dans l'organisation du tourisme.
+      <br> <br>
+      Nous faisons des excursions au Maroc et des excursions dans le désert du Sahara. Des itinéraires sur mesure pour répondre à vos besoins et selon vos intérêts. Pour découvrir le Maroc authentique, nous proposons des circuits d'aventure en 4 × 4, à travers les montagnes de l'Atlas, en passant par des pistes incroyables et en visitant les mille kasbahs. Pour profiter de l'expérience du désert, nous avons des excursions à dos de chameau et des nuits en «tente berbère» au milieu des dunes.
+      <br> <br>
+      Nous organisons des voyages culturels, des voyages de luxe, des activités et des excursions d'une journée depuis Marrakech. Excursions dans les villes impériales avec visites guidées. Voyage en famille, en groupe, en couple ou entre amis. Ici vous trouverez tout ce dont vous avez besoin pour planifier au mieux vos vacances et nous pouvons vous récupérer partout dans le pays (Marrakech, Casablanca, Fès, Ouarzazate ...)
+    </p>
+  </ion-text>
+</div>
+
+
+<ion-slides mode="ios" [options]="option" class="ion-margin-top">
+  <ion-slide>
+    <ion-card>
+      <img src="assets/imgs/excursion-depart-marrakech.jpg" alt="">
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-center">
+          <ion-chip color="primary">
+            <ion-label><h5>1/2</h5></ion-label>
+          </ion-chip>
+          <br>
+          EXCURSION DEPART MARRAKECH
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <img src="assets/imgs/location-voiture-marrakech.jpg" alt="">
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-center">
+          <ion-chip color="primary">
+            <ion-label><h5>2/2</h5></ion-label>
+          </ion-chip>
+          <br>
+          LOCATION DE VOITURES A MARRAKECH
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
+
+<!--location-->
+<div class="ion-text-center ion-margin-top">
+  <ion-chip color="tertiary">
+    <ion-label>
+      <h2 class="titre"><b>LOCATION DE VOITURE À MARRAKECH</b></h2>
+    </ion-label>
+  </ion-chip>
+</div>
+
+<div class="ion-margin-top">
+  <ion-slides mode="ios" [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card>
+        <img src="assets/imgs/location-voiture.jpg" alt="">
+        <ion-card-header>
+
+          <ion-card-title class="ion-text-center">
+            PRADO TX
+          </ion-card-title>
+
+          <ion-card-subtitle>
+            <p>3 - 8 Jour / €120.00</p>
+            <p>
+              <ion-icon slot="start" name="speedometer"></ion-icon>
+              <ion-label style="padding-left: 10px;">Diesel</ion-label>
+            </p>
+            <p>
+              <ion-icon slot="start" name="settings"></ion-icon>
+              <ion-label style="padding-left: 10px;">Auto</ion-label>
+            </p>
+            <p>
+              <ion-icon slot="start" name="scale"></ion-icon>
+              <ion-label style="padding-left: 10px;">52000</ion-label>
+            </p>
+
+          </ion-card-subtitle>
+
+          <ion-button expand="block" color="dark" outline mode="ios">
+            RESERVER
+          </ion-button>
+
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <img src="assets/imgs/kangoo.jpg" alt="">
+        <ion-card-header>
+
+          <ion-card-title class="ion-text-center">
+            KONGOO RENAULT
+          </ion-card-title>
+
+          <ion-card-subtitle>
+            <p>3 - 5 Jour / €32.00</p>
+            <p>
+              <ion-icon slot="start" name="speedometer"></ion-icon>
+              <ion-label style="padding-left: 10px;">Diesel</ion-label>
+            </p>
+            <p>
+              <ion-icon slot="start" name="settings"></ion-icon>
+              <ion-label style="padding-left: 10px;">Auto</ion-label>
+            </p>
+            <p>
+              <ion-icon slot="start" name="scale"></ion-icon>
+              <ion-label style="padding-left: 10px;">70000</ion-label>
+            </p>
+
+          </ion-card-subtitle>
+          <ion-button expand="block" color="dark" outline>
+            RESERVER
+          </ion-button>
+
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+</div>
+
+<!--circuits-->
+<div class="ion-text-center ion-margin-top">
+  <ion-chip color="tertiary">
+    <ion-label>
+      <b class="titre">LES CHOSES À FAIRE À MARRAKECH</b>
+    </ion-label>
+  </ion-chip>
+</div>
+
+<div *ngIf="loading">
+  <ion-item button class="ion-margin-top">
+    <ion-thumbnail slot="start">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-thumbnail>
+    <ion-label>
+      <h4><ion-skeleton-text animated style="width: 90%"></ion-skeleton-text></h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label><ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item button>
+    <ion-thumbnail slot="start">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-thumbnail>
+    <ion-label>
+      <h4><ion-skeleton-text animated style="width: 90%"></ion-skeleton-text></h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label><ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+  </ion-item>
+</div>
+
+<div *ngIf="finishloading">
+  <ion-item button class="ion-margin-top">
+    <ion-thumbnail slot="start">
+      <ion-img src="assets/imgs/buggy.jpg"></ion-img>
+    </ion-thumbnail>
+    <ion-label>
+      <h4>la palmeraie de marrakech en quad et buggy</h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label>-15%</ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item button>
+    <ion-thumbnail slot="start">
+      <ion-img src="assets/imgs/balade-dromadaire-marrakech.jpg"></ion-img>
+    </ion-thumbnail>
+    <ion-label>
+      <h4>le coucher du soleil à dos de dromadaire</h4>
+      <p>
+        <ion-chip slot="start" color="danger">
+          <ion-label>-17%</ion-label>
+        </ion-chip>
+      </p>
+    </ion-label>
+  </ion-item>
+</div>
+
+  <img src="assets/imgs/logo.png" alt="">
+
 </ion-content>

@@ -1,0 +1,174 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Excursions</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item class="ion-text-center">
+    <ion-select mode="ios" placeholder="Vallee d'ourika" interface="action-sheet" cancelText="fermer">
+      <ion-select-option>Vallee d'ourika</ion-select-option>
+      <ion-select-option>Vallee d'asni</ion-select-option>
+      <ion-select-option>Vallee de Siti fadma</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="loading">
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </ion-fab>
+  </div>
+
+  <div *ngIf="finishloading">
+    <ion-slides mode="ios" [options]="option" class="ion-margin-top">
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/01.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/02.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/03.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/04.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div *ngIf="finishloading">
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">VALLÉE D’OURIKA</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            La vallée de l'Ourika reste l'une des vallées les plus belles et les mieux préservées au Maroc, les petits villages accrochés aux côtés des lits, des cascades et des paysages rocheux qui se fondent le désert omniprésent, tout cela forme une harmonie sauvage et séduisante dans les confins de l'Atlas occidental ou le haut Atlas.
+  
+            Pondant cette journée de l’excursion a la vallée de l’ourika et les montagnes de l’atlas, vous pouvez visiter le souk Berbère (un marché hebdomadaire) qui ouvre tous les lundis et vendredis, ainsi n va s’arrêter pour visiter une maison berbère, qui ouvre la porte pour vous et vous invite à voir comment le berbères vivent leurs vie quotidienne et comment préparez le pain traditionnel et dégustez un thé marocain.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">PROGRAMME </b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            - départ de l hôtel ou Riad a 8h <br>
+            - traverse l atlas et visite les cascades de setti FATMA <br>
+            - petite surprise sur place qui vous attend !!!!! <br>
+            - retour a 17h a Marrakech.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">INCLUS DANS LE TARIFES</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Minibus tout option <br>
+            Les frais de chauffeur et gasoil <br>
+            Guide sur place <br>
+            La surprise.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">FORMULAIRE DE CONTACT</b>
+        </ion-label>
+      </ion-chip>
+    </div>
+  
+    <div class="ion-margin-top" mode="md">
+      <ion-item>
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Nom Complet</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label position="floating">Telephone</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="people" slot="start"></ion-icon>
+        <ion-label>Nombre de perssone</ion-label>
+        <ion-select mode="ios" placeholder="1" interface="action-sheet" cancelText="fermer">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>plus de 5</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Date d'arivee</ion-label>
+        <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Date du depart</ion-label>
+        <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+      </ion-item>
+    
+    </div>
+    
+    <ion-button expand="block" shape="round" color="primary" class="ion-margin-top ion-margin-bottom">
+      Réservation 
+    </ion-button>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d217888.62356603926!2d-7.965752910805225!3d31.427630883277153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakesh%2C+Morocco!3m2!1d31.6294723!2d-7.9810845!4m5!1s0xdbaaf678f9d1039%3A0xd968147e4179658d!2sSetti-Fatma%2C+Morocco!3m2!1d31.2258103!2d-7.6758372999999995!5e0!3m2!1sen!2s!4v1450263485458" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    
+  </div>
+
+
+
+
+</ion-content>

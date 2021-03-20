@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'qui-nous',
+    loadChildren: () => import('./pages/qui-nous/qui-nous.module').then( m => m.QuiNousPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'excursions',
+    loadChildren: () => import('./pages/excursions/excursions.module').then( m => m.ExcursionsPageModule)
+  },
+  {
+    path: 'circuits',
+    loadChildren: () => import('./pages/circuits/circuits.module').then( m => m.CircuitsPageModule)
+  },
+  {
+    path: 'activities',
+    loadChildren: () => import('./pages/activities/activities.module').then( m => m.ActivitiesPageModule)
+  },
+  {
+    path: 'transferts',
+    loadChildren: () => import('./pages/transferts/transferts.module').then( m => m.TransfertsPageModule)
+  },
 ];
 
 @NgModule({

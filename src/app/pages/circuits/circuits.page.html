@@ -1,0 +1,204 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Circuits</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item class="ion-text-center">
+    <ion-select mode="ios" placeholder="Circuit desert 2 jours 1 nuit zagora sahara" interface="action-sheet" cancelText="fermer">
+      <ion-select-option>Circuit desert 2 jours 1 nuit zagora sahara</ion-select-option>
+      <ion-select-option>Circuit desert 3 jours 2 nuits merzouga sahara</ion-select-option>
+      <ion-select-option>Circuit desert 4 jours 3 nuits merzouga depuis ouarzazate</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="loading">
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </ion-fab>
+  </div>
+
+  <div *ngIf="finishloading">
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">INTRODUCTION </b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Ce circuit de 2 jours 1 nuit dans le désert va vous prendre au désert pour découvrir le sud du East du Maroc, inclus, les visite des kasbahs a ait ben haddou et ouarzazate, la kasbah Tamnouggalte a Draa, visite des nomades, une nuit sous la tente berbère, découvrir les villages et la culture berbère.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+
+    <ion-slides mode="ios" [options]="option" class="ion-margin-top">
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/circuits/01.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/circuits/02.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/circuits/03.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card">
+          <img src="assets/imgs/circuits/04.jpg" alt="">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div *ngIf="finishloading">
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">JOUR 1: MARRAKECH – KASBAH AIT BAN HADDOU - ZAGORA</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Nous vous rencontrerons à Marrakech et nous conduirons à Ouarzazate à travers le spectaculaire col de Tizi n tichka (2260m), au-dessus des montagnes du Haut Atlas, en appréciant la beauté du paysage sur les routes tordues à travers les villages berbères. Arrivée à la célèbre Kasbah Ait Ben Haddou; La plus grande casbah au Maroc déclarée un site historique matrimonial de l'UNESCO, abritant de nombreux membres de la famille Glaoui. Le déjeuner au restaurant panoramique avec vu sur la Kasbah avant de continuer à Zagora où votre chameau vous attend. Vous serez accueilli avec un verre de thé à la menthe et un turban (foulard du désert) et monter des chameaux pour commencer une aventure dans la mer mystérieuse du sable. Ici vous passerez également votre première nuit sous les étoiles, si vous préférez, dans une tente nomade berbère traditionnelle.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">JOUR 2: ZAGORA – OUARZAZATE – ATLAS - MARRAKECH </b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Après le petit déjeuner dans votre tente au désert, vous serez tranquillement randonnée en chameau retour à votre hôtel. En route, vous ne manquerez pas d'apprécier la beauté unique des spectaculaires dunes de sable - changé avec la lumière au fur et à mesure que la journée progresse. Arrivée à Zagora et après une douche à hôtel, nous partons pour Ouarzazate a travers la vallée de Daraa, visite des kasbahs du sud du Maroc, arrivée à Ouarzazate, arrêt pour e déjeuner et continue à Marrakech, encore une fois sur le col Tizi NTichka arrivant à Marrakech dans la soirée. La visite se termine à votre hébergement
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">CE QUI EST INCLUS</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Dîner <br>
+            Petit déjeuner <br>
+            3h de dromadaire <br>
+            Transport touristique.
+          </p>
+        </ion-text>
+      </div>
+    </div>
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">CE QUI EST NON INCLUS</b>
+        </ion-label>
+      </ion-chip>
+  
+      <div class="container">
+        <ion-text>
+          <p>
+            Le repas de midi <br>
+            Les boissons <br>
+            l'entrées des monuments
+          </p>
+        </ion-text>
+      </div>
+    </div>
+  
+    <div class="ion-text-center ion-margin-top">
+      <ion-chip color="tertiary">
+        <ion-label>
+          <b class="titre">FORMULAIRE DE CONTACT</b>
+        </ion-label>
+      </ion-chip>
+    </div>
+  
+    <div class="ion-margin-top" mode="md">
+      <ion-item>
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Nom Complet</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label position="floating">Telephone</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="people" slot="start"></ion-icon>
+        <ion-label>Nombre de perssone</ion-label>
+        <ion-select mode="ios" placeholder="1" interface="action-sheet" cancelText="fermer">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>plus de 5</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Date d'arivee</ion-label>
+        <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Date du depart</ion-label>
+        <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+      </ion-item>
+    
+    </div>
+    
+    <ion-button expand="block" shape="round" color="primary" class="ion-margin-top ion-margin-bottom" (click)="add()">
+      Réservation 
+    </ion-button>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d875619.5821116889!2d-7.47041376032882!3d30.987528935153104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakesh%2C+Morocco!3m2!1d31.6294723!2d-7.9810845!4m5!1s0xdbae06120411439%3A0x4d090f64a0ec123a!2sA%C3%AFt+Ben+Haddou%2C+Souss-Massa-Draa%2C+Morocco!3m2!1d31.047043!2d-7.1318996!4m5!1s0xdbc36ea58680e95%3A0x75e9e9fb616de232!2sZagora%2C+Morocco!3m2!1d30.345899799999998!2d-5.8406587!5e0!3m2!1sen!2s!4v1452689896406" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+  </div>
+
+
+
+
+</ion-content>

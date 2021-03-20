@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Transferts</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides mode="ios" [options]="option">
+    <ion-slide>
+      <ion-card class="card">
+        <img src="assets/imgs/img1.jpg" alt="">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="card">
+        <img src="assets/imgs/transfert.jpg" alt="">
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="card">
+        <img src="assets/imgs/Transfert-aeroport.jpg" alt="">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ion-text-center ion-margin-top">
+    <ion-chip color="tertiary">
+      <ion-label>
+        <b class="titre">TRANSFERT DE <span>L'AÉROPORT</span> DE MARRAKECH</b>
+      </ion-label>
+    </ion-chip>
+  </div>
+
+  <ion-card class="ion-text-center ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>
+        Pour toutes vos navettes , transferts arrivée ou départ entre l'aéroport de marrakech et le centre ville ou autre destination, BIG BUS MARRAKECH sera à votre disposition. Nous assurons les transferts entre l'aéroport et tous les hôtels ou Riads sur Marrakech ou autre destination.
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div class="ion-text-center ion-margin-top">
+    <ion-chip color="tertiary">
+      <ion-label>
+        <h3><b class="titre">Contact & Réservation</b></h3>
+      </ion-label>
+    </ion-chip>
+  </div>
+
+  <div class="ion-margin-top" mode="md">
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Nom Complet</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="call" slot="start"></ion-icon>
+      <ion-label position="floating">Telephone</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="people" slot="start"></ion-icon>
+      <ion-label>Nombre de perssone</ion-label>
+      <ion-select mode="ios" placeholder="1" interface="action-sheet" cancelText="fermer">
+        <ion-select-option>1</ion-select-option>
+        <ion-select-option>2</ion-select-option>
+        <ion-select-option>3</ion-select-option>
+        <ion-select-option>4</ion-select-option>
+        <ion-select-option>5</ion-select-option>
+        <ion-select-option>plus de 5</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      <ion-label>Date d'arivee</ion-label>
+      <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      <ion-label>Date du depart</ion-label>
+      <ion-datetime min="2015" max="2030" mode="ios" cancelText="fermer" doneText="OK"></ion-datetime>
+    </ion-item>
+  
+  </div>
+  
+  <ion-button expand="block" shape="round" color="primary" class="ion-margin-top ion-margin-bottom">
+    Réservation 
+  </ion-button>
+
+
+  
+</ion-content>

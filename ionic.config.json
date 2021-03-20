@@ -1,5 +1,7 @@
 {
   "name": "BigBus",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
